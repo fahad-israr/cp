@@ -1,0 +1,1 @@
+{"name":"Local: BFSjava","url":"d:\\cp\\BFSjava.java","tests":[{"id":1608610350199,"input":"4\n3\n0 1\n1 2\n2 3\n0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\BFSjava.java","group":"local","local":true}

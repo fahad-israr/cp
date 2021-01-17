@@ -1,0 +1,1 @@
+{"name":"Local: dijkstraGFG","url":"d:\\cp\\dijkstraGFG.java","tests":[{"id":1608039896429,"input":"3\n3 1 0 9 34 21 6 78 43\n1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\dijkstraGFG.java","group":"local","local":true}

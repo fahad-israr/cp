@@ -1,0 +1,1 @@
+{"name":"Local: Main","url":"d:\\cp\\Main.java","tests":[{"id":1605527693106,"input":"2\n3 3\n1 1 0 0 0 1 1 0 1\n4 4\n1 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\Main.java","group":"local","local":true}

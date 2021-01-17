@@ -1,0 +1,1 @@
+{"name":"Local: AlienDictionary","url":"d:\\cp\\AlienDictionary.java","tests":[{"id":1608443549573,"input":"6\n5 4\nwrt wrf er ett rftt\n2 2\nzy zx\n2 3\nab adc\n4 5\nabc bcd qwert ab\n2 3\nabc ab\n2 3\nab abc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\AlienDictionary.java","group":"local","local":true}
