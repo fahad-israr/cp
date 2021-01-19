@@ -22,7 +22,7 @@ class RatinaMaze {
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < n; j++) a[i][j] = sc.nextInt();
 
-            GfG g = new GfG();
+            Solution g = new Solution();
             ArrayList<String> res = g.printPath(a, n);
             if (res.size() > 0) {
                 for (int i = 0; i < res.size(); i++)
@@ -40,7 +40,7 @@ class RatinaMaze {
 // User function Template for Java
 
 // m is the given matrix and n is the order of matrix
-class GfG {
+class Solution {
 
 
     static ArrayList<String> ret; 
