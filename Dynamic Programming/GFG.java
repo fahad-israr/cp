@@ -1,6 +1,7 @@
 import java.lang.*;
 import java.io.*;
-class test
+import java.util.*;
+class longestCommonSubstring
  {  
     static int dp[][];
      static int max=-1;

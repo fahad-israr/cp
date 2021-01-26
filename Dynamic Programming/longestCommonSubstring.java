@@ -1,6 +1,46 @@
 import java.lang.*;
 import java.io.*;
-class test
+import java.util.*;
+/*
+Given two strings. The task is to find the length of the longest common substring.
+
+Example 1:
+
+Input: S1 = "ABCDGH", S2 = "ACDGHR"
+Output: 4
+Explanation: The longest common substring
+is "CDGH" which has length 4.
+â€‹Example 2:
+
+Input: S1 = "ABC", S2 "ACB"
+Output: 1
+Explanation: The longest common substrings
+are "A", "B", "C" all having length 1.1
+
+TESTCASE
+-------------------
+INPUT:
+1
+6 6
+ABCDGH
+ACDGHR
+
+OUTPUT:
+4
+----------------------
+1
+17 60
+KXCGMTMVVGFQQWSPD
+JXZADDUKVLQPKUZJZHWSUTPCAFSYAIBJHAMMEGWBTPQELRNKBLDXGUZGCSEC
+
+OUTPUT:
+2
+-----------------------------
+
+ */
+
+ 
+class longestCommonSubstring
  {  
     static int dp[][];
      static int max=-1;

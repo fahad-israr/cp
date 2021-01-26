@@ -1,0 +1,1 @@
+{"name":"Local: longestCommonSubstring","url":"d:\\cp\\Dynamic Programming\\longestCommonSubstring.java","tests":[{"id":1611586430640,"input":"1\n6 6\nABCDGH\nACDGHR","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\Dynamic Programming\\longestCommonSubstring.java","group":"local","local":true}

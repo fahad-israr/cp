@@ -1,0 +1,1 @@
+{"name":"Local: SExpresssion","url":"d:\\cp\\SExpresssion.java","tests":[{"id":1611329805587,"input":"(A,B) (B,D) (B,C) (C,A)","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\SExpresssion.java","group":"local","local":true}

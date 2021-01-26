@@ -1,0 +1,1 @@
+{"name":"Local: minimumNumberOfPages","url":"d:\\cp\\binary search\\minimumNumberOfPages.java","tests":[{"id":1611515135034,"input":"1\n8\n250 74 159 181 23 45 129 174\n6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\binary search\\minimumNumberOfPages.java","group":"local","local":true}

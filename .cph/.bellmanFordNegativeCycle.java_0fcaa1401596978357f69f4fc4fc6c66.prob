@@ -1,0 +1,1 @@
+{"name":"Local: bellmanFordNegativeCycle","url":"d:\\cp\\bellmanFordNegativeCycle.java","tests":[{"id":1611132024375,"input":"1\n3 3\n0 1 -1\n1 2 -2\n2 0 -3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\bellmanFordNegativeCycle.java","group":"local","local":true}

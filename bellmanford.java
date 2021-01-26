@@ -6,6 +6,14 @@ import java.io.InputStreamReader;
 //import for Scanner and other utility classes
 import java.util.*;
 
+/*
+====TESTCASE====
+3 3
+0 1 -1
+1 2 -2
+2 0 3
+============
+ */
 
 // Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
 
@@ -25,7 +33,7 @@ class bellmanford {
             int dst = Integer.parseInt(inpstr[1]);
             int wt = Integer.parseInt(inpstr[2]);
 
-            Edge tmp = new Edge(src-1,dst-1,wt);
+            Edge tmp = new Edge(src,dst,wt);
             edges[i] = tmp;
         }
         int source = 0;
