@@ -42,7 +42,7 @@ OUTPUT:
  */
 
 
-class longestCommonSubstringMemoization
+class longestCommonSubstringMemoization2
 {
     public static void main(String args[])throws IOException
     {
@@ -81,7 +81,6 @@ class Solution{
     int LCSubStr(char[] X, char[] Y, int m, int n, int lcsCount) {
 		if (m <= 0 || n <= 0)
 			return lcsCount;
-        //if(n==14)System.out.println("m: "+m+" n:"+n+" lcs:"+lcsCount);
 		if (dp[m][n][lcsCount] != null)
 			return dp[m][n][lcsCount];
 

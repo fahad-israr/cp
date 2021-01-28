@@ -40,7 +40,7 @@ OUTPUT:
  */
 
  
-class longestCommonSubstring
+class longestCommonSubstringMemoization1
  {  
     static int dp[][];
      static int max=-1;
@@ -70,27 +70,29 @@ class longestCommonSubstring
 	 }
 	
 	 static int lcs(String a,String b,int n,int m){
-	    if(a.length()==0||b.length()==0) return 0;
-
-	    int[][]dp = new int[n+1][m+1] ;
-
-      int max = 0;
-      for(int i=0;i<n+1;i++)
-        for(int j=0;j<m+1;j++)
-        { 
-          if(i==0||j==0) 
-            dp[i][j] = 0;
-          else
-          if(a.charAt(i-1)==b.charAt(j-1))
-            {
-             dp[i][j] = dp[i-1][j-1]+1;
-             max = Math.max(dp[i][j],max);
-            }
-          else
-            dp[i][j] = 0;
-        }
 	     
-       return max;
+	     if(dp[n][m]!=-1)return dp[n][m];
+	    
+	     if(n==0||m==0)return dp[n][m]=0;
+	     
+	     
+	     if(a.charAt(n-1)==b.charAt(m-1))
+	     {
+	        int res=0;int i=n-1,j=m-1;
+	        while((i>=0&&j>=0)&&a.charAt(i)==b.charAt(j)){
+	            res++;
+	            if(i==0||j==0)return dp[n][m] = Math.max(res,max);
+	            i--;j--;
+	        }
+	        max=Math.max(res,max);
+	        
+	        return dp[n][m]=Math.max(max,Math.max(lcs(a,b,n-res,m),lcs(a,b,n,m-res)));
+	         
+	     }
+	     
+	     return dp[n][m]=Math.max(lcs(a,b,n-1,m),lcs(a,b,n,m-1));
+	     
+	     
 	     
 	 }
 }
