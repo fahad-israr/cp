@@ -10,7 +10,6 @@ public List<Integer> inorderTraversal(TreeNode root) {
         root = stack.pop();
         list.add(root.val);
         root = root.right;
-        
     }
     return list;
 }
