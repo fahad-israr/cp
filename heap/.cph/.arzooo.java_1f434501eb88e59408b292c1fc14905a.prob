@@ -1,0 +1,1 @@
+{"name":"Local: arzooo","url":"d:\\cp\\heap\\arzooo.java","tests":[{"id":1612349884646,"input":"17\n10 8 7 6 5 4 10 20 21 9 11 13 15 19 18 16 19  \n2\n15\n4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cp\\heap\\arzooo.java","group":"local","local":true}

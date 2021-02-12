@@ -116,6 +116,39 @@ Test Case 2:
 Input: Dict[] = { "caa", "aaa", "aab" }, k = 3
 Output: Function returns "cab"
 -------------------------------------------------------
+IMPORTANT TESTCASE
+------------------
+INPUT:
+=========
+6
+5 4
+wrt wrf er ett rftt
+2 2
+zy zx
+2 3
+ab adc
+4 5
+abc bcd qwert ab
+2 3
+abc ab
+2 3
+ab abc
+
+OUTPUT
+==========
+wertf
+1
+yxz
+1
+abcd
+1
+Not possible
+1
+Not possible
+1
+Not possible
+1
+
 */
 
 class Solution
