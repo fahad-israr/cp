@@ -66,18 +66,62 @@ class Chainlength
 // } Driver Code Ends
 
 
-/*class CompareByFirst implements Comparator<Pair>
+class CompareByFirst implements Comparator<Pair>
 {
    public int compare(Pair a, Pair b)
     {
         return a.x - b.x;
     }
-}*/
+}
+//===ANOTHER SOLUTION FROM LEETCODE
+/*
+class Solution:
+    def findLongestChain(self, pairs):
+        N = len(pairs)
+        pairs.sort(key = lambda x: x[1])
+        ans = 0
+        cur = -math.inf
+        for head, tail in pairs:
+            if head > cur:
+                cur = tail
+                ans += 1
+        return ans
+*/
+// ====SOLUTION ENDS
 
+//=== MY SOLN BEGINS==
 class GfG
 {
     int maxChainLength(Pair arr[], int n)
     {
-       // your code here
+//==== Better Greedy Solution here : https://leetcode.com/problems/maximum-length-of-pair-chain/discuss/225801/Proof-of-the-greedy-solution
+       
+       Arrays.sort(arr,new CompareByFirst());
+
+       int[]res =  new int[n+1];
+       Arrays.fill(res,1);
+       int max = 1;
+       for(int i=0;i<n;i++){
+           for(int j=0;j<i;j++){
+               if(arr[j].y<arr[i].x && res[j]+1>res[i])
+                    res[i] = res[j]+1;
+           }
+           max = Math.max(max,res[i]);
+       }
+    
+       return max;
     }
 }
+
+/*
+public int findLongestChain(int[][] pairs) {
+    Arrays.sort(pairs, (a,b) -> a[1] - b[1]);
+    int count = 0, i = 0, n = pairs.length;
+    while (i < n) {
+        count++;
+        int curEnd = pairs[i][1];
+        while (i < n && pairs[i][0] <= curEnd) i++;
+    }
+    return count;
+}
+ */
