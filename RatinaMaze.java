@@ -11,7 +11,7 @@ DDRDRR DRDDRR
 ----------------------------
 */
 import java.util.*;
-class RatinaMaze {
+class RatInaMaze {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
@@ -63,6 +63,7 @@ class Solution {
        Collections.sort(ret);
        return ret;
     }
+    
     static void bfs(int[][] m,int x,int y,int n,String res,boolean[][]visited){
       if(x==n-1 && y==n-1) {ret.add(res);return;}
       
