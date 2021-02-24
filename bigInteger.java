@@ -8,9 +8,11 @@ class bigInteger{
     BigInteger b1=BigInteger.valueOf(10);
     BufferedReader obj=new BufferedReader(new InputStreamReader(System.in));
     BigInteger b2=new BigInteger(obj.readLine());
-
+    // ==> Arithmeric function are subtract() , multiply(), divide(), remainder() <===
+    
     BigInteger product=b1.multiply(b2);
     BigInteger quotient=b2.divide(b1);
+    // BigInteger C = A.add(B); 
     int a=product.intValue();
     String res="Product: "+product.toString()+"\tQuotient: "+quotient.toString();
 
