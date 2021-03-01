@@ -1,6 +1,6 @@
-// Java program to get the value 
-// of a specific environment variable 
-// using System.getenv() method 
+/* Java program to get the value 
+ of a specific environment variable  
+ using System.getenv() method */
 
 public class env { 
 	public static void main(String[] args) 
