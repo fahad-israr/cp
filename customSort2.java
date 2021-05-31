@@ -29,9 +29,9 @@ class Student implements Comparable<Student>
 	//----Compare method
 	//--- (Object this).compareTo(Object a)
   @Override
-  public int compareTo(Student a)
+  public int compareTo(Student b)
 	{
-		return this.rollno - a.rollno;
+		return this.rollno - b.rollno;
 	}
 
 }
