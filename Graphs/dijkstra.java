@@ -112,13 +112,7 @@ class Solution
 {
     static int[] dijkstra(ArrayList<ArrayList<Integer>> g, int src, int V)
     {
-       /*for(ArrayList<Integer> i:g){
-           for(int j:i)
-          System.out.print(j+" "); 
-          System.out.println("\n------------------"); 
-       }
-        System.out.println("\n------TC ENDS-------");
-       return new int[V];*/
+      
        int []distance=new int[V];
        Arrays.fill(distance,Integer.MAX_VALUE);
        boolean included[]=new boolean[V];
@@ -134,6 +128,7 @@ class Solution
        }
         return distance;
     }
+    
     static int next_vertice(int[]distance,boolean[]included,int v){
         int min=Integer.MAX_VALUE;
         int res=-1;
@@ -153,9 +148,5 @@ class Solution
             distance[i] = Math.min(distance[v]+distance_from_this_vertex,distance[i]);
        }
     }
-   /* static allincluded(boolean included[]){
-        for(boolean i:included)
-        if()
-    }*/
     
 }

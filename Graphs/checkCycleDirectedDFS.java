@@ -3,6 +3,18 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
+
+/*
+=== An important Test Case to think about ===
+6 5
+5 3
+3 1
+1 2
+2 4
+4 0
+==============================================
+*/
+
 class checkCycleDirectedDFS
 {
     public static void main (String[] args) {
