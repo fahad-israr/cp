@@ -23,6 +23,7 @@ class bfs{
     System.out.println("------Check Cycle----------");
     System.out.println(isCyclicUndirected(g,v));
   }
+  
   static ArrayList<Integer> bfs_al(ArrayList<ArrayList<Integer>> g,int v , int src){
     boolean visited[] = new boolean [v];
     ArrayList<Integer> res = new ArrayList<Integer>();
@@ -41,6 +42,7 @@ class bfs{
     return res;
   }//---bfs
 
+
   //---detect cycle in undirected graph using bfs
   
   static boolean isCyclicUndirected(ArrayList<ArrayList<Integer>> g , int v){
@@ -50,7 +52,7 @@ class bfs{
         boolean res = false;
         for(int i=0;i<v;i++)
         if(!visited[i])
-        res=res || isCyclicUtil(g,v,visited,i);
+        res = res || isCyclicUtil(g,v,visited,i);
 
         return res;
   }//---isCyclic

@@ -1,5 +1,5 @@
 
-class dfUsingRecursion{
+class dfsUsingRecursion{
   public static void main(String[]args){
   
   //--- Create Graph---
@@ -9,6 +9,8 @@ class dfUsingRecursion{
   DFS(g,v)
 
   }
+
+  // ===== Main DFS HERE ======
   static void DFSUtil(ArrayList<ArrayList<Integer>> g,boolean [] visited,int v){
     System.out.println(v);
     visited[v] = true;
@@ -17,6 +19,8 @@ class dfUsingRecursion{
         DFSUtil(g,visited,i);
     }
   }
+
+
   static void DFS(ArrayList<ArrayList<Integer>> g,int v){
     boolean [] visited = new boolean[v];
 
@@ -25,4 +29,5 @@ class dfUsingRecursion{
       DFSUtil(g,visited,i);
     }
   }//---DFS()
+  
 }

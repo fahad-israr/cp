@@ -1,0 +1,20 @@
+
+
+void dfs(ArrayList<ArrayList<Integer>> adj , int src , boolean[] visited , ArrayList<Integer> res){
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(src);
+        
+        while(!stack.isEmpty()){
+            System.out.println(stack.toString());
+            int curr = stack.pop();
+            res.add(curr);
+            visited[curr]  = true ;
+            
+            for(int i : adj.get(curr)){
+                if(!visited[i]){
+                    stack.push(i);
+                }
+            }
+        }
+        
+    }
