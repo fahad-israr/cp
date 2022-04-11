@@ -1,0 +1,36 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        
+        int[] res = {Integer.MAX_VALUE, Integer.MIN_VALUE};
+        
+        binarySearch(nums, target, res, 0, nums.length - 1);
+        
+        res[0] = res[0] == Integer.MAX_VALUE ? -1 : res[0];
+        
+        res[1] = res[1] == Integer.MIN_VALUE ? -1 : res[1];
+        
+        return res;
+        
+    }
+    
+    void binarySearch(int[] nums, int target, int[] res, int l, int r){
+        
+        if(l > r)return;
+        
+        int mid = l + ((r - l)/2);
+        
+        if(nums[mid] < target){
+            binarySearch(nums, target, res, mid + 1, r);
+        } else if(nums[mid] > target){
+            binarySearch(nums, target, res, l, mid - 1);
+        } else {
+            //element found
+            res[0] = Math.min(res[0], mid);
+            res[1] = Math.max(res[1], mid);
+            binarySearch(nums, target, res, mid + 1, r);
+            binarySearch(nums, target, res, l, mid - 1);
+        }
+    }
+    
+    
+}
