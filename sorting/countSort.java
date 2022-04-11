@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
 
-  public static void countSort(int[] arr, int min, int max) {
+  public static void CountSort(int[] arr, int min, int max) {
       // creating the frequency array and the answer array
       int range = max - min + 1;
       int[] farr = new int[range];
