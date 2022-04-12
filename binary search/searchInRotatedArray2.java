@@ -1,41 +1,67 @@
 /*
 Given a sorted array which is rotated ,search an Element in it .
+Note : Elements can be equal.
+Worst Case: When all are equal.
 Example:
 Array => 5 6 7  2 3 4
 Search: 3
 Answer = 4
 
+Example 2:
+I/p : [3,1,1]
+o/p : 1
 
  */
-class searchInRotatedArray2{
-  public static void main(String... args){
-    int a[] = {5,6,7,2,3,4} ;
-    int key = 3;
-
-    System.out.println(find(a,key));
+class Solution {
+    
+  int min = -1;
+  
+  public int findMin(int[] nums) {
+      int b = 0, e = nums.length - 1;
+      min = nums[0];
+      solve(nums, b, e);
+      
+      return min;
   }
   
-  static int find(int[]a,int key){
-    int b = 0, e = a.length-1;
-    while(b<=e){
-      int mid = b + (e-b)/2 ;
-      if(a[mid] == key) return mid;
-      // if beg -> mid is sorted and key lies in this range
-      if(a[mid]>=a[b] && a[b]<=key && key<a[mid])
-        e = mid - 1;
-      else
-      // if mid -> end is sorted and key lies in this range
-      if(a[mid]<=a[e] && key>a[mid] && key<a[e])
-        b = mid + 1;
-      else
-      // if beg--> mid is not sorted
-      if(a[b]>a[mid])
-        e = mid - 1;
+  private void solve(int[] nums, int b, int e) {
+     
+      if(b > e){
+          return;
+      }
       
-      else b = mid +1;
+      int l = nums.length;
+      
+  
+          
+      int mid = b + ((e - b)/2);
+      
+      min = Math.min(Math.min(nums[b], nums[e]), Math.min(min,nums[mid]));
+  
+      //System.out.println("b: "+b+" e:"+e+" mid:"+mid);
 
-    }
-    return -1;
+      int prev = (mid - 1 + l) % l ;
+
+      int next = (mid + 1) % l ;
+
+      if(nums[mid] < nums[prev] && nums[mid] < nums[next]){
+          min = nums[mid];
+          return;
+      }
+
+      if(nums[mid] > nums[e]){
+          solve(nums, mid+1, e);
+      }
+      else if(nums[mid] < nums[b]){
+          solve(nums, b, mid - 1);
+      } else {
+          // nums[mid] == nums[b] && nums[mid] == nums[e]
+          // Call both sides.
+          solve(nums, mid+1, e);
+          solve(nums, b, mid - 1);
+          
+      }
+          
+      
   }
-
 }
